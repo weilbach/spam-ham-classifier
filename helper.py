@@ -9,12 +9,6 @@ def count_punctuation(text):
     
     return round(count/(len(text) - text.count(" ")), 3)*100
 
-# def clean_text(text, stopwords, ps):
-#     text = "".join([word.lower() for word in text if word not in punctuation])
-#     tokens = re.split('\W+', text)
-#     text = [ps.stem(word) for word in tokens if word not in stopwords]
-#     return text
-
 def remove_punctuation(text):
     text = ''.join([char for char in text if char not in punctuation])
     return text
