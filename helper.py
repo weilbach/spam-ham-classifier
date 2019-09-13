@@ -10,7 +10,7 @@ def count_punctuation(text):
     return round(count/(len(text) - text.count(" ")), 3)*100
 
 def remove_punctuation(text):
-    text = ''.join([char for char in text if char not in punctuation])
+    text = ''.join([char.lower() for char in text if char not in punctuation])
     return text
 
 def tokenize(text):
